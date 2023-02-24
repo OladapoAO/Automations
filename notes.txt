@@ -8,4 +8,17 @@ it is a library exclusive for web scraping
 Automation with Emails & API
 
 Lets test out a Pull.
-on the command line // do a git pull to update the local repository with the online repo.
+on the command line // do a git pull to update the local repository with the online repo. 'This is the quick way'
+A pull is used to update our local repo, when the remote has been updated on GitHub or somewhere else.
+
+A more detailed way to update your local repo is by 
+- git fetch origin/main *checks for all updates on github/other branch*
+
+- git status 
+
+- git diff 'to show the difference between the two branches'
+
+But when i make changes on my local repo, follow the steps:
+- commit all changes using : git commit -a -m '{whatever text.}'
+- check the status using : git status.
+- push the changes to our remote origin using : git push origin
