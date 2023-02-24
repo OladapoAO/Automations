@@ -1,0 +1,6 @@
+Selenium & Beautiful Soup are different automation tools
+Selenium is more targeted for browser automation, which means you can use it to automate actions on a browser,
+such filling text boxes, login and logout of websites.
+
+If you want to extract data from a website, we use Beautiful Soup
+it is a library exclusive for web scraping
