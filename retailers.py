@@ -1,8 +1,7 @@
-from datetime import datetime
-import string
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 
 service = Service("/Users/dapoaowolabi/Downloads/chromedriver")
@@ -17,7 +16,7 @@ def get_driver():
     options.add_argument("disable-blink-features=AutomationControlled")
 
     driver = webdriver.Chrome(options=options)
-    driver.get("http://automated.pythonanywhere.com")
+    driver.get("https://www.nike.com/ca/member/profile/login?continueUrl=https://www.nike.com/ca/")
     return driver
 
 def clean_text(text):
@@ -25,20 +24,17 @@ def clean_text(text):
     output = text.split(": ")
     return float(output[1])
 
-def write_file(text):
-    """ Write input text into a text file"""
-    filename = f"{datetime.now().strftime('%Y-%m-%d.%H-%M-%S')}.txt"
-    with open(filename,'w') as file:
-        file.write(text)
-
 def main():
     driver = get_driver()
-    while True:
-        time.sleep(2)
-        element = driver.find_element(By.XPATH,"/html/body/div/div/h1[2]")
-        text = str(clean_text(element.text))
-        write_file(text)
-
+    driver.find_element(By.XPATH,"/html/body/div[4]/div/div[1]/div/div[6]/form/div[2]/input").send_keys("Daps-o@live.com")
+    time.sleep(5)
+    driver.find_element(By.XPATH,"/html/body/div[4]/div/div[1]/div/div[6]/form/div[3]/input").send_keys("Owolabi93" + Keys.RETURN)
+    time.sleep(2)
+    #driver.find_element(By.XPATH,'/html/body/nav/div/a').click()
+    driver.find_element(By.XPATH,'/html/body/div[5]/div/div/footer/div/div[1]/div[1]/div/div[2]/div/ul/li[6]/a').click()
+    time.sleep(2)
+    
   
+"""/html/body/div[5]/div/div/footer/div/div[1]/div[1]/div/div[2]/div/ul/li[6]/a"""
 
-print(main())
+main()
