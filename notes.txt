@@ -6,3 +6,6 @@ If you want to extract data from a website, we use Beautiful Soup
 it is a library exclusive for web scraping
 
 Automation with Emails & API
+
+Lets test out a Pull.
+on the command line // do a git pull to update the local repository with the online repo.
