@@ -1,5 +1,5 @@
 import requests
-newsapi_key = '559b300d693f4b779ec1395d142909cb'
+newsapi_key = 'get from api notebook'
 
 def get_news(country, api_key=newsapi_key):
     url = f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={api_key}'

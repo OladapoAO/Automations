@@ -1,7 +1,7 @@
 import requests
 data = open('data.txt','x')
 data.write('City, Time, Temperature, Condtion')
-api_key = '62551a74425023512a82f051c46edb56'
+api_key = 'get api key from notebook'
 city_name = 'Toronto'
 url = f'https://api.openweathermap.org/data/2.5/forecast?q={city_name}&appid={api_key}&units=metric'
 
