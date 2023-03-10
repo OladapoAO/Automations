@@ -1,5 +1,5 @@
 import requests
-newsapi_key = '559b300d693f4b779ec1395d142909cb'
+newsapi_key = 'get api key from notebook'
 #newsapi_link =f'https://newsapi.org/v2/everything?qInTitle=stock%20market&from=2023-2-27&to=2023-2-28&sortBy=popularity&language=en&apiKey={newsapi_key}'
 
 # cmd + / to highlight and comment
